@@ -19,5 +19,9 @@ public class Sala {
 		this.enSala = new Butaca[20][15];
 	}
 	
-	
+	//punto dos 
+	public Boolean estaOcupada(Integer fila, Integer columna) {
+		boolean ocupada = enSala[fila][columna].getOcupada();
+		return ocupada;
+	}
 }
