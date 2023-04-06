@@ -15,6 +15,7 @@ public class Sala {
 	private Butaca enSala[][];
 	
 	// CONSTRUCTOR
+	//punto uno
 	public Sala() {
 		this.enSala = new Butaca[20][15];
 	}
@@ -23,5 +24,12 @@ public class Sala {
 	public Boolean estaOcupada(Integer fila, Integer columna) {
 		boolean ocupada = enSala[fila][columna].getOcupada();
 		return ocupada;
+	}
+	
+	//punto tres
+	public void ocuparButada(Integer fila, Integer columna) {
+		if(this.estaOcupada(fila, columna)) {
+			enSala[fila][columna].setOcupada(true);
+		}
 	}
 }
