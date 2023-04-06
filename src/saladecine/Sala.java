@@ -27,9 +27,24 @@ public class Sala {
 	}
 	
 	//punto tres
-	public void ocuparButada(Integer fila, Integer columna) {
-		if(this.estaOcupada(fila, columna)) {
+	public Boolean ocuparButada(Integer fila, Integer columna) {
+		Boolean seOcupo = false;
+		if(this.estaOcupada(fila, columna) == false) {
 			enSala[fila][columna].setOcupada(true);
 		}
+		return seOcupo;
+	}
+	
+	//punto cuatro
+	public Integer butacasOcupadas() {
+		Integer cantidad = 0;
+		for(int i = 0; i < enSala.length; i++) {
+			for(int j = 0; j < enSala[i].length; j++) {
+				if(this.estaOcupada(i, j) == true) {
+					cantidad = cantidad + 1;
+				}
+			}
+		}
+		return cantidad;
 	}
 }
