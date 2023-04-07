@@ -52,7 +52,14 @@ public class Boleteria {
 				break;
 			case ACOMODAR_GRUPO:
 				System.out.println("----------------------------");
-				
+				System.out.println("Ingrese la cantidad de personas del grupo: \n");
+				int personas = entrada.nextInt();
+				if(cine.hayEspacioPara(personas)) {
+					System.out.println("Existe disponibilidad; \n Desea reservar las butacas? 1. Si, 2. No");
+					System.out.println("FALTA QUE FUNCIONE ESTO");
+				} else {
+					System.out.println("No existe disponibilidad, pruebe con un grupo mas pequeño.");
+				}
 				
 				break;
 				
