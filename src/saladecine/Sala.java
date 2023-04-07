@@ -79,26 +79,6 @@ public class Sala {
 		return hayEspacio;
 	}
 	
-	/*public String hayEspacioPara(Integer cantidadDePersonas) {
-		String hayEspacio = "";
-		int contador = 0;
-		for(int i = 0; i < enSala.length; i++) {
-			for(int j = 0; j < enSala[i].length; j++) {
-				if(enSala[i][j] != null && enSala[i][j].getOcupada() == false) {
-					contador = contador + 1;
-					hayEspacio += enSala[i][j].getNumeroButaca() + ", ";
-					if(contador == cantidadDePersonas) {
-						break;
-					}
-				} else if (enSala[i][j] != null && enSala[i][j].getOcupada() == true) {
-					contador = 0;
-					hayEspacio = "No existe sisponibilidad";
-				}
-			}
-		}
-		return hayEspacio;
-	}*/
-	
 	// inicializar array
 	public void inicializarArray() {
 		for(int i = 0; i < enSala.length; i++) {
