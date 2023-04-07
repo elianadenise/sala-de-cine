@@ -19,7 +19,6 @@ public class Sala {
 	// punto uno
 	public Sala(String nombre) {
 		this.nombre = nombre;
-		//this.enSala = new Butaca[20][15];
 	}
 	
 	public String getNombre() {
