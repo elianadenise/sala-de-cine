@@ -12,30 +12,41 @@ public class Sala {
 	 */
 	
 	// ATRIBUTOS
-	private Butaca enSala[][];
+	private String nombre;
+	private Butaca enSala[][] = new Butaca[20][15];
 	
 	// CONSTRUCTOR
-	//punto uno
-	public Sala() {
-		this.enSala = new Butaca[20][15];
+	// punto uno
+	public Sala(String nombre) {
+		this.nombre = nombre;
+		//this.enSala = new Butaca[20][15];
 	}
 	
-	//punto dos 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	// punto dos 
 	public Boolean estaOcupada(Integer fila, Integer columna) {
 		boolean ocupada = enSala[fila][columna].getOcupada();
 		return ocupada;
 	}
 	
-	//punto tres
-	public Boolean ocuparButada(Integer fila, Integer columna) {
+	// punto tres
+	public Boolean ocuparButaca(Integer fila, Integer columna) {
 		Boolean seOcupo = false;
 		if(this.estaOcupada(fila, columna) == false) {
 			enSala[fila][columna].setOcupada(true);
+			seOcupo = true;
 		}
 		return seOcupo;
 	}
 	
-	//punto cuatro
+	// punto cuatro
 	public Integer butacasOcupadas() {
 		Integer cantidad = 0;
 		for(int i = 0; i < enSala.length; i++) {
@@ -46,5 +57,23 @@ public class Sala {
 			}
 		}
 		return cantidad;
+	}
+	
+	// punto cinco
+	public Boolean hayEspacioPara(Integer cantidadDePersonas) {
+		Boolean hayEspacio = false;
+		
+		return hayEspacio;
+	}
+	
+	// inicializar array
+	public void inicializarArray() {
+		for(int i = 0; i < enSala.length; i++) {
+			for(int j = 0; j < enSala[i].length; j++) {
+				if(enSala[i][j] == null) {
+					enSala[i][j] = new Butaca();
+				}
+			}
+		}
 	}
 }
