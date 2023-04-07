@@ -13,12 +13,13 @@ public class Sala {
 	
 	// ATRIBUTOS
 	private String nombre;
-	private Butaca enSala[][] = new Butaca[20][15];
+	private Butaca enSala[][]= new Butaca[20][15];
 	
 	// CONSTRUCTOR
 	// punto uno
 	public Sala(String nombre) {
 		this.nombre = nombre;
+		this.inicializarArray();
 	}
 	
 	public String getNombre() {

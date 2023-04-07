@@ -13,7 +13,6 @@ public class Boleteria {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		Sala cine = new Sala("Cine de Eliana");
-		cine.inicializarArray();
 		System.out.println("Bienvenidx al " + cine.getNombre());
 
 		Integer opcion = SALIR;
