@@ -3,11 +3,11 @@ package saladecine;
 public class Butaca {
 	// ATRIBUTOS
 	private Boolean ocupada;
-	private static int numeroButaca = 0;
+	private int numeroButaca = 0;
 	
 	// CONSTRUCTOR
 	public Butaca() {
-		Butaca.numeroButaca++;
+		numeroButaca++;
 		this.ocupada = false;
 	}
 
@@ -19,4 +19,13 @@ public class Butaca {
 	public void setOcupada(Boolean ocupada) {
 		this.ocupada = ocupada;
 	}
+
+	public int getNumeroButaca() {
+		return numeroButaca;
+	}
+
+	public void setNumeroButaca(int numeroButaca) {
+		numeroButaca = numeroButaca;
+	}
+	
 }
