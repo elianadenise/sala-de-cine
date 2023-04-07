@@ -61,7 +61,20 @@ public class Sala {
 	// punto cinco
 	public Boolean hayEspacioPara(Integer cantidadDePersonas) {
 		Boolean hayEspacio = false;
-		
+		int contador = 0;
+		for(int i = 0; i < enSala.length; i++) {
+			for(int j = 0; j < enSala[i].length; j++) {
+				if(enSala[i][j] != null && enSala[i][j].getOcupada() == false) {
+					contador = contador + 1;
+					if(contador == cantidadDePersonas) {
+						hayEspacio = true;
+					}
+				} else if (enSala[i][j] != null && enSala[i][j].getOcupada() == true) {
+					contador = 0;
+					hayEspacio = false;
+				}
+			}
+		}
 		return hayEspacio;
 	}
 	
