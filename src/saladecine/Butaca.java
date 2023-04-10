@@ -1,7 +1,7 @@
 package saladecine;
 
 public class Butaca {
-	// ATRIBUTOS HAUXILIOooo
+	// ATRIBUTOS 
 	private Boolean ocupada;
 	private int numeroButaca = 0;
 	

@@ -14,7 +14,7 @@ public class Sala {
 	// ATRIBUTOS
 	private String nombre;
 	private Butaca enSala[][]= new Butaca[20][15];
-	
+	private Integer cantidadDeButacasOcupadas = 0;
 	// CONSTRUCTOR
 	// punto uno
 	public Sala(String nombre) {
@@ -42,21 +42,15 @@ public class Sala {
 		if(this.estaOcupada(fila, columna) == false) {
 			enSala[fila][columna].setOcupada(true);
 			seOcupo = true;
+			this.cantidadDeButacasOcupadas = this.cantidadDeButacasOcupadas + 1;
+			
 		}
 		return seOcupo;
 	}
 	
 	// punto cuatro
 	public Integer butacasOcupadas() {
-		Integer cantidad = 0;
-		for(int i = 0; i < enSala.length; i++) {
-			for(int j = 0; j < enSala[i].length; j++) {
-				if(this.estaOcupada(i, j) == true) {
-					cantidad = cantidad + 1;
-				}
-			}
-		}
-		return cantidad;
+		return this.cantidadDeButacasOcupadas;
 	}
 	
 	// punto cinco
